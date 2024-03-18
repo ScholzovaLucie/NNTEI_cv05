@@ -37,4 +37,11 @@ public class StackAutomat {
 
         return stringBuilder.toString().equals(target);
     }
+
+    public void loadRules(String[] definiceAutomatu) {
+        this.setRuleSequence(definiceAutomatu[0]);
+        for(int i = 0; i < definiceAutomatu.length - 1; i++){
+            setRule(i, definiceAutomatu[i + 1]);
+        }
+    }
 }
